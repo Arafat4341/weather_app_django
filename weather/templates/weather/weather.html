@@ -39,7 +39,7 @@
 
       <div class="starter-template">
         <h1>Enter City Name</h1>
-        <p class="lead">Enter a city name to fetch the weather information.</p>
+        <p class="lead">Enter the name of a city to fetch the weather information.</p>
         <div class="row">
 		  <div class="col-lg-6">
 		    <div class="input-group">
@@ -49,12 +49,30 @@
 		      </span>
 		    </div><!-- /input-group -->
 		  </div><!-- /.col-lg-6 -->
+		  
+		  
 		</div><!-- /.row -->
-		<div class="row">
-			<div class="col-md-4 result well">
-				
-			</div>
-		</div>
+		<br>
+		<div class="col-md-4">
+			<article>
+				<div class="media-left">
+		            <figure class="image is-50x50">
+		            	<img src="http://openweathermap.org/img/w/{{city_weather.icon}}.png" alt="Image">
+		            </figure>
+		        </div>
+				<div class="media-content">
+		            <div class="content">
+		                <p>
+		                <span class="lead">{{city_weather.city}}</span>
+		                <br>
+		                <span class="subtitle">{{ city_weather.temperature }}° F</span>
+		                <br> {{ city_weather.description }}
+		                </p>
+		            </div>
+		        </div>
+			</article>
+        </div>
+
       </div>
 
     </div><!-- /.container -->
